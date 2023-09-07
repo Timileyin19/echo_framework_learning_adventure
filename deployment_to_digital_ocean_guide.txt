@@ -1,0 +1,38 @@
+Sept 7
+DIGITAL OCEAN (Deployment steps)
+1. Create >> Droplets >> Select the Nearest Data Center to you >> Ubuntu OS (Linux) >> CPU Option (Intel) >> $8/month >> 
+2. SSH: To create this, goto your terminal, and type: ssh-keygen (keep pressing Enter-Enter till you get to the last stage)
+	
+Your identification has been saved in /Users/timmytech/.ssh/id_rsa.
+Your public key has been saved in /Users/timmytech/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:qkO6rcCWOtkN2dgiPeT9msCIVlUaAU2WxRhZ9xVPmgc timmytech@TIMMYTECH.local
+
+1. To get your SSH, enter the following CMD in your terminal: cat ~/.ssh/id_rsa.pub
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDYzfcsT8f2D4kM/Ixj4WnQFXLcsUdH7/CIIGlHYZwFm1fHa+iLVLMRpGxlrUZD7qSRSr0HhOd+/5zmeOZy0f/7mvPDOxNlAH2KP9w9Gxd1KX0msfLlK0nHUJRhlRK0mGzza297LOcisZArK3BA6245eB/JLAo6zHC2NKYGoYAQIMkyIqeK/Q+v6L8jjxNhFWdku/P+bef+evQkNCcdVwUV0tkfm9HSZ+D5OVbIBKzZLqMrzLG9eVQugvrUjfOLMQ+2ojVjsHDjdTzeHZoq4hlCsksfKXHq4G18/NVDhwen9O4h98CqOSTy0DVLfDj4th9jRVOFKmkc73QjCpLpD8kCsylelifinsn4ZNBO1yf76gtmhGy5QIz73KIhNoTWgbHieBxiOzwxHbVXuhzxX8WstzTvXYHEG1nID9AxxC2bR2NFv9A3iKg/VXDD1B7OUrfAcrW9V3YVVG29ZuH/+eaNCsd+lXeXq+Btr0SgSQQZXRS6qtINKf2PekE5gdh1Rbk= timmytech@TIMMYTECH.local
+
+
+2. paste the SSH-KEY in the digital ocean (go the SSH key method
+3. Add free metrics and also add the option of Backend
+4. Enter hostname (here I used ujblockchain)
+5. Then click on “Create Droplets” 
+6. This will take you to the project page and then on the resource, then click on it to be sure it is  done
+7. Then go o ssh root@[YOUR_IP_AADDRESS] - the one that says ip4 e.g ssh root@206.189.31.94  
+8. Then add user (instead of using the default “root” user that we were given by Digital Ocean) using the command: adduser [username] e.g adduser timileyin19
+9. Enter the password of the User (do ensure that you remember the username and the password that you used)
+10. Then enter the full name of the user (Timileyin Abiodun), en
+11. Give permission to the user created using the cpe; usermod -aG sudo [username_created] e.g usermod -aG sudo timileyin19
+12. Then you can exist the server by pressing exit
+13. Then you add permission ssh to the new user
+		a. get the ssh key in a new tab/window using the cmd: cat ~/.ssh/id_rsa.pub
+		b. login with the root user: ssh root@[IP_Address]
+		c. Enter into the new user directory:  cd /home/[username_created] e.g cd /home/timileyin19
+		d. In the new user directory, enter the command:  mkdir .ssh, to create the folder where you will add the ssh-key file
+		e. Then enter into the .ssh folder using the command:  cd .ssh
+		f. create the file to store the ssh-key using the command: sudo nano authorized_keys. do ensure that the authorized_keys is spelt correctly
+		g. Then copy and paste the your ssh-key into this place and then press ctrl + X , this will prompt you to ask if you want to save or not, ensure you press y
+		h. Then type exit so that you can be logged out from this root user. 
+		i. To get if this user has been successcfully created, just use the login command ssh [username]@[your_IP_Address]
+		j. If it works, then it means that you have successfully created the user with adequate permission granted. 
+
