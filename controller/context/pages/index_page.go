@@ -8,5 +8,8 @@ import (
 
 
 func IndexContext(c echo.Context) error {
-	return c.String(http.StatusOK, "Changed the name of the package")
+	// return c.String(http.StatusOK, "Changed the name of the package")
+	return c.Render(http.StatusOK, "index.html", map[string]interface{}{})
 }
+
+
