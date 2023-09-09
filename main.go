@@ -1,11 +1,10 @@
 package main
 
 import (
-
 	"github.com/labstack/echo/v4"
-	"github.com/timileyin19/echo_framework/constant"
-	"github.com/timileyin19/echo_framework/router"
-	"github.com/timileyin19/echo_framework/server"
+	"github.com/timileyin19/go_farm/constant"
+	"github.com/timileyin19/go_farm/router"
+	"github.com/timileyin19/go_farm/server"
 )
 
 func main() {

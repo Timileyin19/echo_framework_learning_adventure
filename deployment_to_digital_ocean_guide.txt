@@ -94,3 +94,15 @@ change:  "permitRootUser: NO
 	# go version									-> check the version of go installed (to confirm if go is installed)
 ```
 
+// resolve the issues
+https://pkg.go.dev/github.com/walexblom/air#section-readme
+
+
+// Deployment
+```
+	# go mod init github.com/[username]/[project_name]		-> initialize the go module
+	# go mod tidy											-> tidy the go module
+	# go mod vendor										-> vendor the go module
+	# go build												-> build the go module
+	# ./[project_name]										-> run the go module
+```
