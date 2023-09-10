@@ -21,7 +21,7 @@ func (t *Template) Render(w io.Writer, name string, data interface{}, c echo.Con
 
 
 func LoadTemplate() *Template {
-	//get app path
+	//get app path (NB: the next 3 lines of code will not make your application to run locally, it will only run on the server)
 	path, _ := os.Executable()
 	// get file path
 	filePath := filepath.Dir(path)
