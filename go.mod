@@ -1,4 +1,4 @@
-module github.com/timileyin19/go_farm
+module github.com/timileyin19/gofarm
 
 go 1.21.0
 

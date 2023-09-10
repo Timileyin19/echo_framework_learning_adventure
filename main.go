@@ -2,9 +2,9 @@ package main
 
 import (
 	"github.com/labstack/echo/v4"
-	"github.com/timileyin19/go_farm/constant"
-	"github.com/timileyin19/go_farm/router"
-	"github.com/timileyin19/go_farm/server"
+	"github.com/timileyin19/gofarm/constant"
+	"github.com/timileyin19/gofarm/router"
+	"github.com/timileyin19/gofarm/server"
 )
 
 func main() {
@@ -25,4 +25,6 @@ func main() {
 	server.SetServer(app)
 
 }
+
+
 
