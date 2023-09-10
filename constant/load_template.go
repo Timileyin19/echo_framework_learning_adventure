@@ -1,8 +1,8 @@
 package constant
 
 import (
-	"io"
 	"html/template"
+	"io"
 
 	"github.com/labstack/echo/v4"
 )
@@ -16,6 +16,7 @@ func (t Template) Render(w io.Writer, name string, data interface{}, c echo.Cont
 	return t.templates.ExecuteTemplate(w, name, data)
 }
 
+// 
 
 
 func LoadTemplate() *Template {
