@@ -13,7 +13,7 @@
 *.dylib
 .air.toml
 tmp
-deployment_to_digital_ocean_guide.txt
+deployment_details.txt
 yes.go
 
 # Test binary, built with `go test -c`
