@@ -15,6 +15,7 @@
 tmp
 deployment_details.txt
 yes.go
+*.yaml
 
 # Test binary, built with `go test -c`
 *.test
