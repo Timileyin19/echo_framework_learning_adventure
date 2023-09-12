@@ -1,11 +1,8 @@
 package constant
 
 import (
-	"fmt"
 	"html/template"
 	"io"
-	"os"
-	"path/filepath"
 
 	"github.com/labstack/echo/v4"
 )
@@ -21,16 +18,20 @@ func (t *Template) Render(w io.Writer, name string, data interface{}, c echo.Con
 
 
 func LoadTemplate() *Template {
-	//get app path (NB: the next 3 lines of code will not make your application to run locally, it will only run on the server)
-	path, _ := os.Executable()
-	// get file path
-	filePath := filepath.Dir(path)
-	//
-	templateFolder := fmt.Sprintf("%v/repository/templates/*", filePath)
+	// ONLINE OR SERVER DEPLOYMENT FUNCTIONALITY
+	// path, _ := os.Executable()
+	
+	// filePath := filepath.Dir(path)
 
-	fmt.Print(filePath)
+	// templateFolder := fmt.Sprintf("%v/repository/templates/*", filePath)
+
+	// template := &Template{
+	// 	templates: template.Must(template.ParseGlob(templateFolder)),
+	// }
+
+	// LOCALHOST SERVER TESTING - DEVELOPMENT 
 	template := &Template{
-		templates: template.Must(template.ParseGlob(templateFolder)),
+		templates: template.Must(template.ParseGlob("repository/templates/*")),
 	}
 
 	return template

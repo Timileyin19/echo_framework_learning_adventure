@@ -7,5 +7,11 @@ import (
 
 func LoadAllRouters(app *echo.Echo) {
 	http.IndexRouter(app)
+
+	// form router 
+	http.FormRouter(app)
+
+	// details router
+	http.DetailsRouter(app)
 }
 
