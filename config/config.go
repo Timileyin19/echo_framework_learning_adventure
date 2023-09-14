@@ -17,9 +17,23 @@ func Init(env string) {
 
 	config.SetConfigName(env)
 
+	// LOCAL
 	config.AddConfigPath("config/")
 
-	err = config.ReadInConfig()
+
+	// func getConfigFile() string {
+	// 	// RUNNING ON THE SERVER
+	// 	path, _ := os.Executable()
+		
+	// 	filePath := filepath.Dir(path)
+		
+	// 	configFolder := fmt.Sprintf("%v/config/production.yaml", filePath)
+	
+	// 	return configFolder
+	// }
+	// var configPath = getConfigFile()
+
+	// err = config.ReadInConfig()
 
 	if err != nil {
 		panic(fmt.Errorf("error: file not found %w", err))
